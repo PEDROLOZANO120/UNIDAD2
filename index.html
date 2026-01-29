@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecología de comunidades - Tema 1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="hero" aria-label="Mapa de temas">
+      <img
+        class="hero__image"
+        src="assets/ecologia-comunidades.svg"
+        alt="Mapa ilustrado de ecología de comunidades con niveles y temas"
+      />
+      <button class="topic-pin" type="button" data-topic="tema-1" aria-label="Abrir tema 1">
+        Tema 1
+      </button>
+      <div class="hero__hint">
+        <p>Haz clic en el pin para abrir el Tema 1.</p>
+      </div>
+    </section>
+
+    <aside class="panel" id="tema-1" aria-live="polite">
+      <header class="panel__header">
+        <h1>Interacciones interespecíficas</h1>
+        <p class="panel__subtitle">Explora recursos y resuelve el reto de 5 preguntas.</p>
+      </header>
+
+      <section class="panel__content">
+        <div class="resources">
+          <h2>Recursos</h2>
+          <ul>
+            <li><strong>Lectura base:</strong> Mutualismo, depredación, competencia y comensalismo.</li>
+            <li><strong>Video sugerido:</strong> <a href="https://www.youtube.com/watch?v=Gf0a_5xC3wA" target="_blank" rel="noreferrer">Relaciones ecológicas (7 min)</a></li>
+            <li><strong>Infografía:</strong> Tipos de interacción y signos (+/-, 0/+).</li>
+          </ul>
+        </div>
+
+        <form class="quiz" id="quiz-form">
+          <h2>Reto del Tema 1</h2>
+
+          <div class="question">
+            <label for="q1">1) Completa: En el mutualismo ambas especies salen <strong>________</strong>.</label>
+            <input id="q1" name="q1" type="text" placeholder="Escribe la palabra" />
+          </div>
+
+          <fieldset class="question">
+            <legend>2) Opción múltiple: ¿Cuál interacción representa un efecto (+/-)?</legend>
+            <label><input type="radio" name="q2" value="mutualismo" /> Mutualismo</label>
+            <label><input type="radio" name="q2" value="depredacion" /> Depredación</label>
+            <label><input type="radio" name="q2" value="comensalismo" /> Comensalismo</label>
+          </fieldset>
+
+          <div class="question">
+            <p>3) Relaciona la interacción con su definición:</p>
+            <div class="match">
+              <div class="match__row">
+                <span>Competencia</span>
+                <select name="q3a">
+                  <option value="">Selecciona</option>
+                  <option value="a">Ambas especies se perjudican (-/-).</option>
+                  <option value="b">Una se beneficia y otra no se afecta (0/+).</option>
+                  <option value="c">Ambas se benefician (+/+).</option>
+                </select>
+              </div>
+              <div class="match__row">
+                <span>Comensalismo</span>
+                <select name="q3b">
+                  <option value="">Selecciona</option>
+                  <option value="a">Ambas especies se perjudican (-/-).</option>
+                  <option value="b">Una se beneficia y otra no se afecta (0/+).</option>
+                  <option value="c">Ambas se benefician (+/+).</option>
+                </select>
+              </div>
+              <div class="match__row">
+                <span>Mutualismo</span>
+                <select name="q3c">
+                  <option value="">Selecciona</option>
+                  <option value="a">Ambas especies se perjudican (-/-).</option>
+                  <option value="b">Una se beneficia y otra no se afecta (0/+).</option>
+                  <option value="c">Ambas se benefician (+/+).</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="question">
+            <p>4) Mini crucigrama (4 letras): Especie que se alimenta de otra.</p>
+            <div class="crossword" role="group" aria-label="Crucigrama">
+              <input maxlength="1" aria-label="Letra 1" />
+              <input maxlength="1" aria-label="Letra 2" />
+              <input maxlength="1" aria-label="Letra 3" />
+              <input maxlength="1" aria-label="Letra 4" />
+            </div>
+          </div>
+
+          <div class="question">
+            <p>5) Sopa de letras: busca MUTUALISMO y DEPREDAR.</p>
+            <div class="wordsearch" aria-hidden="true">
+              M U T U A L I S M O
+              D E P R E D A R X
+              A L M S A Q W E R
+              Z X C V B N M L K
+              P O I U Y T R E W
+              Q W E R T Y U I O
+            </div>
+            <label for="q5">Escribe una de las palabras encontradas:</label>
+            <input id="q5" name="q5" type="text" placeholder="Tu respuesta" />
+          </div>
+
+          <button type="submit" class="primary">Enviar respuestas</button>
+          <p class="quiz__feedback" id="quiz-feedback" role="status"></p>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
